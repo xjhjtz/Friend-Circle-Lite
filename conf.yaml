@@ -10,7 +10,7 @@ debug: false
 #   article_count: 每个站点最多抓取的文章数量
 spider_settings:
   enable: true
-  json_url: "https://blog.liushen.fun/friend.json"
+  json_url: "https://xjhjtz.github.io/friend.json"
   article_count: 5
 
 # 代理配置
@@ -51,7 +51,7 @@ link_check:
   max_workers: 10
   status_api_url: "https://v2.xxapi.cn/api/status?url={url}"
   enable_backlink_check: true
-  author_url: "blog.liushen.fun"
+  author_url: "xjhjtz.github.io"
 
 # 邮件推送功能配置
 # 说明：按计划时间把本轮抓取到的全部友圈文章整理成一封邮件，发送给指定邮箱。
@@ -77,13 +77,13 @@ email_push:
 #   github_username/github_repo 仅在无法从 GITHUB_REPOSITORY / FCL_REPO 解析仓库时兜底；
 #   GitHub Actions 会自动提供 GITHUB_REPOSITORY，fork 后通常无需修改这两项。
 rss_subscribe:
-  enable: true
-  github_username: willow-god
+  enable: false
+  github_username: xjhjtz
   github_repo: Friend-Circle-Lite
-  your_blog_url: https://blog.liushen.fun/
+  your_blog_url: https://xjhjtz.github.io/
   email_template: "./templates/article_notify.html"
   website_info:
-    title: "清羽飞扬"
+    title: "xjhjtzac的Blog"
 
 # SMTP 配置
 # 说明：用于上方邮件相关功能。如果不使用邮件功能，可关闭 email_push 和 rss_subscribe。
@@ -95,8 +95,6 @@ smtp:
 
 # 特殊 RSS 地址指定
 # 说明：用于指定特殊 RSS 地址，比如 B 站专栏等不常见 RSS 地址后缀。可以置空，但不要删除此项。
-specific_RSS:
-  - name: "阮一峰"
-    url: "http://feeds.feedburner.com/ruanyifeng"
+specific_RSS: []
   # - name: "无名小栈"
   #   url: "https://blog.imsyy.top/rss.xml"
